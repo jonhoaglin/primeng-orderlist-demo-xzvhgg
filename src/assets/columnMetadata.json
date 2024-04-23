@@ -1,0 +1,98 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"header": "Description",
+			"align": "left",
+			"field": "SecurityDescription",
+			"frozen": true,
+			"isSelected": true,
+			"isLocked": true
+		},
+		{
+			"id": 2,
+			"header": "Symbol/CUSIP",
+			"field": "Symbol",
+			"isSelected": true,
+			"isLocked": false
+		},
+		{
+			"id": 3,
+			"header": "Account",
+			"field": "AccountNickname",
+			"isSelected": true
+		},
+		{
+			"id": 4,
+			"header": "Market Value",
+			"align": "right",
+			"field": "MarketValue",
+			"isSelected": true,
+			"isLocked": true
+		},
+		{
+			"id": 5,
+			"header": "% of Holdings",
+			"align": "right",
+			"field": "HoldingPercent",
+			"isSelected": true
+		},
+		{
+			"id": 6,
+			"header": "Quantity",
+			"align": "right",
+			"field": "Quantity",
+			"isSelected": true
+		},
+		{
+			"id": 7,
+			"header": "MarketPrice",
+			"align": "right",
+			"field": "Market Price",
+			"isSelected": true
+		},
+		{
+			"id": 8,
+			"header": "Price Change",
+			"align": "right",
+			"field": "DailyPriceChange",
+			"isSelected": true
+		},
+		{
+			"id": 9,
+			"header": "Mkt Value Change",
+			"align": "right",
+			"field": "DailyChangeDollarAmount",
+			"isSelected": true
+		},
+		{
+			"id": 10,
+			"header": "% Change",
+			"align": "right",
+			"field": "DailyChangePercent",
+			"isSelected": true
+		},
+		{
+			"id": 11,
+			"header": "Est. Annual Income",
+			"align": "right",
+			"field": "EstimatedAnnualIncome",
+			"isSelected": true
+		},
+		{
+			"id": 12,
+			"header": "Est. Annual Yield",
+			"align": "right",
+			"field": "EstimatedYield",
+			"isSelected": true
+		},
+		{
+			"id": 13,
+			"header": "Balance Sheet Type",
+			"align": "left",
+			"field": "AssetCategory",
+			"isSelected": true,
+			"isDefaultSort": true
+		}
+	]
+}

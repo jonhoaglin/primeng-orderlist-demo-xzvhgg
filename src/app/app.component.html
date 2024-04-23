@@ -1,0 +1,33 @@
+<div>
+  <p-orderList 
+    [value]="orderableCols"
+    [style]="{ padding: '0rem' }"
+    [listStyle]="{ 'max-height': '30rem' }"
+    dragdrop="true"
+    (onReorder)="reorder($event)">
+
+    <ng-template pTemplate="header">
+      <div>
+        <p-button icon="pi pi-angle-left"></p-button>Reorder, sort or select
+      </div>
+      <div class="col-item" *ngFor="let col of frozenCols">
+        <p-checkbox [(ngModel)]="col.isSelected" [binary]="true" [disabled]="col.isLocked"></p-checkbox>
+        <div class="col-list-detail">
+          <h5 class="p-mb-2">{{ col.header }}</h5>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template let-col pTemplate="item">    
+      <div class="col-item">
+        <p-checkbox [(ngModel)]="col.isSelected" [binary]="true" [disabled]="col.isLocked"></p-checkbox>
+        <div class="col-list-detail">
+          <h5 class="p-mb-2">{{ col.header }}</h5>
+        </div>
+      </div>
+    </ng-template>
+    
+    <ng-template pTemplate="empty">There are no items to display</ng-template>
+  </p-orderList>
+  <p-button label="Save" (onClick)="save()"></p-button>
+</div>
