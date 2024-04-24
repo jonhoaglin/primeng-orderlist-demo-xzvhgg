@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
-import { ColumnMetadataService } from './columnMetadata.service';
+import _ from 'lodash';
 import { ColumnMetadata } from './columnMetadata.model';
-import * as _ from 'lodash';
+import { ColumnMetadataService } from './columnMetadata.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  frozenCols: ColumnMetadata[];
-  orderableCols: ColumnMetadata[];
+  title = 'primeng-orderlist-demo';
+
+  frozenCols: ColumnMetadata[] = [];
+  orderableCols: ColumnMetadata[] = [];
 
   constructor(private columnMetadataService: ColumnMetadataService) {}
 
@@ -27,7 +29,7 @@ export class AppComponent {
     alert(JSON.stringify(cols));
   }
 
-  reorder(event){
+  reorder(event: ColumnMetadata[]){
     console.log(this.orderableCols.indexOf(event[0]));
     alert(JSON.stringify(event, null, 2));
   }

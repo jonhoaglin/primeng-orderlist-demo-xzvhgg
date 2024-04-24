@@ -11,7 +11,7 @@
         <p-button icon="pi pi-angle-left"></p-button>Reorder, sort or select
       </div>
       <div class="col-item" *ngFor="let col of frozenCols">
-        <p-checkbox [(ngModel)]="col.isSelected" [binary]="true" [disabled]="col.isLocked"></p-checkbox>
+        <p-checkbox [(ngModel)]="col.isSelected" [binary]="true" [disabled]="!!col.isLocked"></p-checkbox>
         <div class="col-list-detail">
           <h5 class="p-mb-2">{{ col.header }}</h5>
         </div>
@@ -20,7 +20,7 @@
 
     <ng-template let-col pTemplate="item">    
       <div class="col-item">
-        <p-checkbox [(ngModel)]="col.isSelected" [binary]="true" [disabled]="col.isLocked"></p-checkbox>
+        <p-checkbox [(ngModel)]="col.isSelected" [binary]="true" [disabled]="!!col.isLocked"></p-checkbox>
         <div class="col-list-detail">
           <h5 class="p-mb-2">{{ col.header }}</h5>
         </div>
