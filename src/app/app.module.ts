@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
     OrderListModule,
     ButtonModule,
     FormsModule,
