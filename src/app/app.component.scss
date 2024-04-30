@@ -3,18 +3,54 @@
     align-items: center;
     padding: .5rem;
     width: 100%;
+    height: 3rem;
+
+    .pi-ellipsis-v {
+        width: .5rem;
+    }
 }
 
-.p-orderlist-header {
-    background: green;
+.col-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.col-item-detail {
+    margin-left: .5rem;
+    flex-grow: 1;
+}
+
+.orderlist-save {
+    display: block;
+    margin: 1rem;
+    width: 15rem;
+
+    button {
+        width: 100%;
+    }
 }
 
 :host ::ng-deep {
-    .p-orderlist-controls {
-        display: none;
-    }
+    .orderlist {
+        width: 20rem;
+    
+        .p-orderlist-controls {
+            display: none;
+        }
 
-    .p-orderlist-header {
-        background: none;
+        .p-orderlist-header {
+            background: none;
+        }
+
+        .p-orderlist-list {
+            max-height: 25rem;
+            margin: 0 0.5rem 0 0.5rem;
+            scrollbar-width: none;
+        }
+
+        .p-orderlist-item {
+            border-bottom: 1px solid #dee2e6;
+        }
     }
 }
